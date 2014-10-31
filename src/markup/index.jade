@@ -3,9 +3,12 @@ html
   block head
   head
     title Test
+    link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css", rel="stylesheet")
     link(rel='stylesheet', href='assets/css/styles.css')
-  body
-    h1 Hello World
-    h3 You are neat
-    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js')
-    script(src='app.js')
+    base(href='/')
+  body(ng-cloak, ng-app='app')
+    div(ng-include='\'/templates/nav.html\'')
+    div(ng-view)
+    script(src='https://code.angularjs.org/1.3.0/angular.js')
+    script(src='https://code.angularjs.org/1.3.0/angular-route.js')
+    script(src='assets/js/app.js')

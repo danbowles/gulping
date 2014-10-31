@@ -8,7 +8,11 @@ module.exports = {
     port: 7000
   },
   scripts: {
-    src: src + '/scripts/**/*.js'
+    src: [
+      src + '/**/module.js',
+      src + '/scripts/**/*.js'
+    ],
+    dest: dest + '/assets/js'
   },
   markup: {
     src: src + '/markup/**/*.jade',
